@@ -1,0 +1,122 @@
+.header {
+    height: 30vw;
+    margin: 30px auto;
+    background-color: #58433a;
+    /* background-size: contain; */
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-contents {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 70%;
+    /* bottom: 10%;
+    left: 6vw; */
+    padding: 5vw 6vw;
+    animation: fadeIn 3s;
+    transition: ease-in-out;
+}
+
+.header-contents h2 {
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw, 22px);
+}
+
+.header-contents p {
+    color: white;
+    font-size: 1vw;
+}
+
+.header-contents button {
+    border: none;
+    color: #060606;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 1vw 2.3vw;
+    font-size: max(1vw, 13px);
+    background-color: white;
+    border-radius: 50px;
+}
+.header-contents button:hover {  
+    color: white; 
+    cursor: pointer;
+    background-color: #000000;
+}
+
+
+.plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+    max-width: 40%;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    animation: animatePlate 30s linear forwards infinite;
+}
+
+.plate .food {
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food img {
+    position: relative;
+    z-index: -23;
+    width: 46vw;
+    height: 46vw;
+}
+
+/* .header img{
+    animation: animatePlate 30s linear  infinite forwards;
+    width: 80%;
+    
+} */
+
+@keyframes animatePlate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width:1050px) {
+    .header-contents {
+        max-width: 65%;
+    }
+}
+
+@media (max-width:750px) {
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}
+
+@media (max-width:480px) {
+    .header-contents h2 {
+        font-size: 14px;
+    }
+
+    .header-contents button {
+        padding: 1.5vw 3vw;
+    }
+}
